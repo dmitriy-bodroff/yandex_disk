@@ -1,9 +1,9 @@
-import 'package:yandex_disk/yandex_disk.dart';
 import 'package:test/test.dart';
+import 'package:yandex_disk/yandex_disk.dart';
 
 void main() {
   group('A group of tests', () {
-    Awesome awesome;
+    late Awesome awesome;
 
     setUp(() {
       awesome = Awesome();

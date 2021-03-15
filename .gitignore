@@ -15,3 +15,8 @@ doc/api/
 # Файлы и директории созданные IntelliJ IDEA
 .idea/
 *.iml
+
+# Файл с чувствительными данными для доступа к Яндекс.Диск по REST API и OAuth
+docs/credentials.txt
+docs/http-client.private.env.json
+example/configuration.dart
