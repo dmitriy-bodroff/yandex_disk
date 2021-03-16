@@ -3,14 +3,14 @@ import 'package:yandex_disk/yandex_disk.dart';
 
 void main() {
   group('A group of tests', () {
-    late Awesome awesome;
+    late Disk disk;
 
     setUp(() {
-      awesome = Awesome();
+      disk = Disk();
     });
 
     test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
+      expect(disk.unlimitedAutouploadEnabled, isNull);
     });
   });
 }
