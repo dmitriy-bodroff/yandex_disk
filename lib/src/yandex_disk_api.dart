@@ -20,6 +20,7 @@ class YandexDiskApi {
         );
 
   /// Данные о Диске пользователя.
+  ///
   /// See: https://yandex.ru/dev/disk/api/reference/capacity.html
   Future<Disk> readDisk({final String? fields}) async {
     final response = await _dio.get('/v1/disk', queryParameters: {
@@ -41,6 +42,7 @@ class YandexDiskApi {
   }
 
   /// Загрузка файла на Диск.
+  ///
   /// See: https://yandex.ru/dev/disk/api/reference/upload.html
   Future<void> uploadDiskResource({
     required final String path,
@@ -64,6 +66,7 @@ class YandexDiskApi {
   }
 
   /// Метаинформация о файле или папке.
+  ///
   /// See: https://yandex.ru/dev/disk/api/reference/meta.html
   Future<Resource> readDiskResource({
     required final String path,
@@ -88,6 +91,7 @@ class YandexDiskApi {
   }
 
   /// Добавление метаинформации для ресурса.
+  ///
   /// See: https://yandex.ru/dev/disk/api/reference/meta-add.html
   Future<Resource> updateDiskResourceInfo(
       {required final String path, final String? fields, final Map? customProperties}) async {
@@ -108,6 +112,7 @@ class YandexDiskApi {
   }
 
   /// Копирование файла или папки.
+  ///
   /// See: https://yandex.ru/dev/disk/api/reference/copy.html
   Future<Link> copyDiskResource({
     required final String from,
@@ -135,6 +140,7 @@ class YandexDiskApi {
   }
 
   /// Удаление файла или папки.
+  ///
   /// See: https://yandex.ru/dev/disk/api/reference/delete.html
   Future<void> deleteDiskResource({
     required final String path,
@@ -158,6 +164,7 @@ class YandexDiskApi {
   }
 
   /// Статус операции.
+  ///
   /// See: https://yandex.ru/dev/disk/api/reference/operations.html
   Future<OperationStatus> readDiskOperation({required final String operationId, final String? fields}) async {
     final response = await _dio.get('$_diskOperations/$operationId', queryParameters: {
