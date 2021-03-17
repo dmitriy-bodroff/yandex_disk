@@ -100,7 +100,7 @@ _$_Resource _$_$_ResourceFromJson(Map<String, dynamic> json) {
     exif: json['exif'] == null
         ? null
         : Exif.fromJson(json['exif'] as Map<String, dynamic>),
-    customProperties: json['custom_properties'],
+    customProperties: json['custom_properties'] as Map<String, dynamic>?,
     mediaType: json['media_type'] as String?,
     preview: json['preview'] as String?,
     type: json['type'] as String,
@@ -425,7 +425,7 @@ _$_TrashResource _$_$_TrashResourceFromJson(Map<String, dynamic> json) {
     exif: json['exif'] == null
         ? null
         : Exif.fromJson(json['exif'] as Map<String, dynamic>),
-    customProperties: json['custom_properties'],
+    customProperties: json['custom_properties'] as Map<String, dynamic>?,
     originPath: json['origin_path'] as String?,
     mediaType: json['media_type'] as String?,
     sha256: json['sha256'] as String?,
@@ -509,6 +509,17 @@ _$_OperationStatus _$_$_OperationStatusFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_OperationStatusToJson(_$_OperationStatus instance) =>
     <String, dynamic>{
       'status': instance.status,
+    };
+
+_$_ResourcePatch _$_$_ResourcePatchFromJson(Map<String, dynamic> json) {
+  return _$_ResourcePatch(
+    customProperties: json['custom_properties'] as Map<String, dynamic>?,
+  );
+}
+
+Map<String, dynamic> _$_$_ResourcePatchToJson(_$_ResourcePatch instance) =>
+    <String, dynamic>{
+      'custom_properties': instance.customProperties,
     };
 
 _$_Error _$_$_ErrorFromJson(Map<String, dynamic> json) {

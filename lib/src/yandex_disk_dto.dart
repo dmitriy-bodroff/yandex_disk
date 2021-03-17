@@ -62,7 +62,7 @@ class Resource with _$Resource {
     @JsonKey(name: 'photoslice_time') String? photosliceTime,
     @JsonKey(name: '_embedded') ResourceList? embedded,
     @JsonKey(name: 'exif') Exif? exif,
-    @JsonKey(name: 'custom_properties') Object? customProperties,
+    @JsonKey(name: 'custom_properties') Map? customProperties,
     @JsonKey(name: 'media_type') String? mediaType,
     @JsonKey(name: 'preview') String? preview,
     @JsonKey(name: 'type') required String type,
@@ -128,6 +128,7 @@ class CommentIds with _$CommentIds {
 
 @freezed
 class Link with _$Link {
+  const Link._();
   const factory Link({
     @JsonKey(name: 'href') required String href,
     @JsonKey(name: 'method') required String method,
@@ -135,6 +136,8 @@ class Link with _$Link {
   }) = _Link;
 
   factory Link.fromJson(Map<String, dynamic> json) => _$LinkFromJson(json);
+
+  String extractOperationId() => Uri.parse(href).pathSegments.last;
 }
 
 @freezed
@@ -251,7 +254,7 @@ class TrashResource with _$TrashResource {
     @JsonKey(name: 'photoslice_time') String? photosliceTime,
     @JsonKey(name: '_embedded') TrashResourceList? embedded,
     @JsonKey(name: 'exif') Exif? exif,
-    @JsonKey(name: 'custom_properties') Object? customProperties,
+    @JsonKey(name: 'custom_properties') Map? customProperties,
     @JsonKey(name: 'origin_path') String? originPath,
     @JsonKey(name: 'media_type') String? mediaType,
     @JsonKey(name: 'sha256') String? sha256,
@@ -294,6 +297,15 @@ class OperationStatus with _$OperationStatus {
   }) = _OperationStatus;
 
   factory OperationStatus.fromJson(Map<String, dynamic> json) => _$OperationStatusFromJson(json);
+}
+
+@freezed
+class ResourcePatch with _$ResourcePatch {
+  const factory ResourcePatch({
+    @JsonKey(name: 'custom_properties') Map? customProperties,
+  }) = _ResourcePatch;
+
+  factory ResourcePatch.fromJson(Map<String, dynamic> json) => _$ResourcePatchFromJson(json);
 }
 
 @freezed

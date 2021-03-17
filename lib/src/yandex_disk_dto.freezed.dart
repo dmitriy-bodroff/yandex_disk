@@ -1141,29 +1141,52 @@ class _$ResourceTearOff {
   const _$ResourceTearOff();
 
   _Resource call(
-      {@JsonKey(name: 'antivirus_status') Object? antivirusStatus,
-      @JsonKey(name: 'resource_id') String? resourceId,
-      @JsonKey(name: 'share') ShareInfo? share,
-      @JsonKey(name: 'file') String? file,
-      @JsonKey(name: 'size') int? size,
-      @JsonKey(name: 'photoslice_time') String? photosliceTime,
-      @JsonKey(name: '_embedded') ResourceList? embedded,
-      @JsonKey(name: 'exif') Exif? exif,
-      @JsonKey(name: 'custom_properties') Object? customProperties,
-      @JsonKey(name: 'media_type') String? mediaType,
-      @JsonKey(name: 'preview') String? preview,
-      @JsonKey(name: 'type') required String type,
-      @JsonKey(name: 'mime_type') String? mimeType,
-      @JsonKey(name: 'revision') int? revision,
-      @JsonKey(name: 'public_url') String? publicUrl,
-      @JsonKey(name: 'path') required String path,
-      @JsonKey(name: 'md5') String? md5,
-      @JsonKey(name: 'public_key') String? publicKey,
-      @JsonKey(name: 'sha256') String? sha256,
-      @JsonKey(name: 'name') required String name,
-      @JsonKey(name: 'created') required String created,
-      @JsonKey(name: 'modified') required String modified,
-      @JsonKey(name: 'comment_ids') CommentIds? commentIds}) {
+      {@JsonKey(name: 'antivirus_status')
+          Object? antivirusStatus,
+      @JsonKey(name: 'resource_id')
+          String? resourceId,
+      @JsonKey(name: 'share')
+          ShareInfo? share,
+      @JsonKey(name: 'file')
+          String? file,
+      @JsonKey(name: 'size')
+          int? size,
+      @JsonKey(name: 'photoslice_time')
+          String? photosliceTime,
+      @JsonKey(name: '_embedded')
+          ResourceList? embedded,
+      @JsonKey(name: 'exif')
+          Exif? exif,
+      @JsonKey(name: 'custom_properties')
+          Map<dynamic, dynamic>? customProperties,
+      @JsonKey(name: 'media_type')
+          String? mediaType,
+      @JsonKey(name: 'preview')
+          String? preview,
+      @JsonKey(name: 'type')
+          required String type,
+      @JsonKey(name: 'mime_type')
+          String? mimeType,
+      @JsonKey(name: 'revision')
+          int? revision,
+      @JsonKey(name: 'public_url')
+          String? publicUrl,
+      @JsonKey(name: 'path')
+          required String path,
+      @JsonKey(name: 'md5')
+          String? md5,
+      @JsonKey(name: 'public_key')
+          String? publicKey,
+      @JsonKey(name: 'sha256')
+          String? sha256,
+      @JsonKey(name: 'name')
+          required String name,
+      @JsonKey(name: 'created')
+          required String created,
+      @JsonKey(name: 'modified')
+          required String modified,
+      @JsonKey(name: 'comment_ids')
+          CommentIds? commentIds}) {
     return _Resource(
       antivirusStatus: antivirusStatus,
       resourceId: resourceId,
@@ -1218,7 +1241,8 @@ mixin _$Resource {
   @JsonKey(name: 'exif')
   Exif? get exif => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_properties')
-  Object? get customProperties => throw _privateConstructorUsedError;
+  Map<dynamic, dynamic>? get customProperties =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'media_type')
   String? get mediaType => throw _privateConstructorUsedError;
   @JsonKey(name: 'preview')
@@ -1259,29 +1283,52 @@ abstract class $ResourceCopyWith<$Res> {
   factory $ResourceCopyWith(Resource value, $Res Function(Resource) then) =
       _$ResourceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'antivirus_status') Object? antivirusStatus,
-      @JsonKey(name: 'resource_id') String? resourceId,
-      @JsonKey(name: 'share') ShareInfo? share,
-      @JsonKey(name: 'file') String? file,
-      @JsonKey(name: 'size') int? size,
-      @JsonKey(name: 'photoslice_time') String? photosliceTime,
-      @JsonKey(name: '_embedded') ResourceList? embedded,
-      @JsonKey(name: 'exif') Exif? exif,
-      @JsonKey(name: 'custom_properties') Object? customProperties,
-      @JsonKey(name: 'media_type') String? mediaType,
-      @JsonKey(name: 'preview') String? preview,
-      @JsonKey(name: 'type') String type,
-      @JsonKey(name: 'mime_type') String? mimeType,
-      @JsonKey(name: 'revision') int? revision,
-      @JsonKey(name: 'public_url') String? publicUrl,
-      @JsonKey(name: 'path') String path,
-      @JsonKey(name: 'md5') String? md5,
-      @JsonKey(name: 'public_key') String? publicKey,
-      @JsonKey(name: 'sha256') String? sha256,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'created') String created,
-      @JsonKey(name: 'modified') String modified,
-      @JsonKey(name: 'comment_ids') CommentIds? commentIds});
+      {@JsonKey(name: 'antivirus_status')
+          Object? antivirusStatus,
+      @JsonKey(name: 'resource_id')
+          String? resourceId,
+      @JsonKey(name: 'share')
+          ShareInfo? share,
+      @JsonKey(name: 'file')
+          String? file,
+      @JsonKey(name: 'size')
+          int? size,
+      @JsonKey(name: 'photoslice_time')
+          String? photosliceTime,
+      @JsonKey(name: '_embedded')
+          ResourceList? embedded,
+      @JsonKey(name: 'exif')
+          Exif? exif,
+      @JsonKey(name: 'custom_properties')
+          Map<dynamic, dynamic>? customProperties,
+      @JsonKey(name: 'media_type')
+          String? mediaType,
+      @JsonKey(name: 'preview')
+          String? preview,
+      @JsonKey(name: 'type')
+          String type,
+      @JsonKey(name: 'mime_type')
+          String? mimeType,
+      @JsonKey(name: 'revision')
+          int? revision,
+      @JsonKey(name: 'public_url')
+          String? publicUrl,
+      @JsonKey(name: 'path')
+          String path,
+      @JsonKey(name: 'md5')
+          String? md5,
+      @JsonKey(name: 'public_key')
+          String? publicKey,
+      @JsonKey(name: 'sha256')
+          String? sha256,
+      @JsonKey(name: 'name')
+          String name,
+      @JsonKey(name: 'created')
+          String created,
+      @JsonKey(name: 'modified')
+          String modified,
+      @JsonKey(name: 'comment_ids')
+          CommentIds? commentIds});
 
   $ShareInfoCopyWith<$Res>? get share;
   $ResourceListCopyWith<$Res>? get embedded;
@@ -1356,7 +1403,8 @@ class _$ResourceCopyWithImpl<$Res> implements $ResourceCopyWith<$Res> {
               as Exif?,
       customProperties: customProperties == freezed
           ? _value.customProperties
-          : customProperties,
+          : customProperties // ignore: cast_nullable_to_non_nullable
+              as Map<dynamic, dynamic>?,
       mediaType: mediaType == freezed
           ? _value.mediaType
           : mediaType // ignore: cast_nullable_to_non_nullable
@@ -1467,29 +1515,52 @@ abstract class _$ResourceCopyWith<$Res> implements $ResourceCopyWith<$Res> {
       __$ResourceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'antivirus_status') Object? antivirusStatus,
-      @JsonKey(name: 'resource_id') String? resourceId,
-      @JsonKey(name: 'share') ShareInfo? share,
-      @JsonKey(name: 'file') String? file,
-      @JsonKey(name: 'size') int? size,
-      @JsonKey(name: 'photoslice_time') String? photosliceTime,
-      @JsonKey(name: '_embedded') ResourceList? embedded,
-      @JsonKey(name: 'exif') Exif? exif,
-      @JsonKey(name: 'custom_properties') Object? customProperties,
-      @JsonKey(name: 'media_type') String? mediaType,
-      @JsonKey(name: 'preview') String? preview,
-      @JsonKey(name: 'type') String type,
-      @JsonKey(name: 'mime_type') String? mimeType,
-      @JsonKey(name: 'revision') int? revision,
-      @JsonKey(name: 'public_url') String? publicUrl,
-      @JsonKey(name: 'path') String path,
-      @JsonKey(name: 'md5') String? md5,
-      @JsonKey(name: 'public_key') String? publicKey,
-      @JsonKey(name: 'sha256') String? sha256,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'created') String created,
-      @JsonKey(name: 'modified') String modified,
-      @JsonKey(name: 'comment_ids') CommentIds? commentIds});
+      {@JsonKey(name: 'antivirus_status')
+          Object? antivirusStatus,
+      @JsonKey(name: 'resource_id')
+          String? resourceId,
+      @JsonKey(name: 'share')
+          ShareInfo? share,
+      @JsonKey(name: 'file')
+          String? file,
+      @JsonKey(name: 'size')
+          int? size,
+      @JsonKey(name: 'photoslice_time')
+          String? photosliceTime,
+      @JsonKey(name: '_embedded')
+          ResourceList? embedded,
+      @JsonKey(name: 'exif')
+          Exif? exif,
+      @JsonKey(name: 'custom_properties')
+          Map<dynamic, dynamic>? customProperties,
+      @JsonKey(name: 'media_type')
+          String? mediaType,
+      @JsonKey(name: 'preview')
+          String? preview,
+      @JsonKey(name: 'type')
+          String type,
+      @JsonKey(name: 'mime_type')
+          String? mimeType,
+      @JsonKey(name: 'revision')
+          int? revision,
+      @JsonKey(name: 'public_url')
+          String? publicUrl,
+      @JsonKey(name: 'path')
+          String path,
+      @JsonKey(name: 'md5')
+          String? md5,
+      @JsonKey(name: 'public_key')
+          String? publicKey,
+      @JsonKey(name: 'sha256')
+          String? sha256,
+      @JsonKey(name: 'name')
+          String name,
+      @JsonKey(name: 'created')
+          String created,
+      @JsonKey(name: 'modified')
+          String modified,
+      @JsonKey(name: 'comment_ids')
+          CommentIds? commentIds});
 
   @override
   $ShareInfoCopyWith<$Res>? get share;
@@ -1569,7 +1640,8 @@ class __$ResourceCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
               as Exif?,
       customProperties: customProperties == freezed
           ? _value.customProperties
-          : customProperties,
+          : customProperties // ignore: cast_nullable_to_non_nullable
+              as Map<dynamic, dynamic>?,
       mediaType: mediaType == freezed
           ? _value.mediaType
           : mediaType // ignore: cast_nullable_to_non_nullable
@@ -1688,7 +1760,7 @@ class _$_Resource implements _Resource {
   final Exif? exif;
   @override
   @JsonKey(name: 'custom_properties')
-  final Object? customProperties;
+  final Map<dynamic, dynamic>? customProperties;
   @override
   @JsonKey(name: 'media_type')
   final String? mediaType;
@@ -1843,29 +1915,52 @@ class _$_Resource implements _Resource {
 
 abstract class _Resource implements Resource {
   const factory _Resource(
-      {@JsonKey(name: 'antivirus_status') Object? antivirusStatus,
-      @JsonKey(name: 'resource_id') String? resourceId,
-      @JsonKey(name: 'share') ShareInfo? share,
-      @JsonKey(name: 'file') String? file,
-      @JsonKey(name: 'size') int? size,
-      @JsonKey(name: 'photoslice_time') String? photosliceTime,
-      @JsonKey(name: '_embedded') ResourceList? embedded,
-      @JsonKey(name: 'exif') Exif? exif,
-      @JsonKey(name: 'custom_properties') Object? customProperties,
-      @JsonKey(name: 'media_type') String? mediaType,
-      @JsonKey(name: 'preview') String? preview,
-      @JsonKey(name: 'type') required String type,
-      @JsonKey(name: 'mime_type') String? mimeType,
-      @JsonKey(name: 'revision') int? revision,
-      @JsonKey(name: 'public_url') String? publicUrl,
-      @JsonKey(name: 'path') required String path,
-      @JsonKey(name: 'md5') String? md5,
-      @JsonKey(name: 'public_key') String? publicKey,
-      @JsonKey(name: 'sha256') String? sha256,
-      @JsonKey(name: 'name') required String name,
-      @JsonKey(name: 'created') required String created,
-      @JsonKey(name: 'modified') required String modified,
-      @JsonKey(name: 'comment_ids') CommentIds? commentIds}) = _$_Resource;
+      {@JsonKey(name: 'antivirus_status')
+          Object? antivirusStatus,
+      @JsonKey(name: 'resource_id')
+          String? resourceId,
+      @JsonKey(name: 'share')
+          ShareInfo? share,
+      @JsonKey(name: 'file')
+          String? file,
+      @JsonKey(name: 'size')
+          int? size,
+      @JsonKey(name: 'photoslice_time')
+          String? photosliceTime,
+      @JsonKey(name: '_embedded')
+          ResourceList? embedded,
+      @JsonKey(name: 'exif')
+          Exif? exif,
+      @JsonKey(name: 'custom_properties')
+          Map<dynamic, dynamic>? customProperties,
+      @JsonKey(name: 'media_type')
+          String? mediaType,
+      @JsonKey(name: 'preview')
+          String? preview,
+      @JsonKey(name: 'type')
+          required String type,
+      @JsonKey(name: 'mime_type')
+          String? mimeType,
+      @JsonKey(name: 'revision')
+          int? revision,
+      @JsonKey(name: 'public_url')
+          String? publicUrl,
+      @JsonKey(name: 'path')
+          required String path,
+      @JsonKey(name: 'md5')
+          String? md5,
+      @JsonKey(name: 'public_key')
+          String? publicKey,
+      @JsonKey(name: 'sha256')
+          String? sha256,
+      @JsonKey(name: 'name')
+          required String name,
+      @JsonKey(name: 'created')
+          required String created,
+      @JsonKey(name: 'modified')
+          required String modified,
+      @JsonKey(name: 'comment_ids')
+          CommentIds? commentIds}) = _$_Resource;
 
   factory _Resource.fromJson(Map<String, dynamic> json) = _$_Resource.fromJson;
 
@@ -1895,7 +1990,8 @@ abstract class _Resource implements Resource {
   Exif? get exif => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_properties')
-  Object? get customProperties => throw _privateConstructorUsedError;
+  Map<dynamic, dynamic>? get customProperties =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'media_type')
   String? get mediaType => throw _privateConstructorUsedError;
@@ -2904,11 +3000,12 @@ class __$LinkCopyWithImpl<$Res> extends _$LinkCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_Link implements _Link {
+class _$_Link extends _Link {
   const _$_Link(
       {@JsonKey(name: 'href') required this.href,
       @JsonKey(name: 'method') required this.method,
-      @JsonKey(name: 'templated') this.templated});
+      @JsonKey(name: 'templated') this.templated})
+      : super._();
 
   factory _$_Link.fromJson(Map<String, dynamic> json) =>
       _$_$_LinkFromJson(json);
@@ -2959,11 +3056,12 @@ class _$_Link implements _Link {
   }
 }
 
-abstract class _Link implements Link {
+abstract class _Link extends Link {
   const factory _Link(
       {@JsonKey(name: 'href') required String href,
       @JsonKey(name: 'method') required String method,
       @JsonKey(name: 'templated') bool? templated}) = _$_Link;
+  const _Link._() : super._();
 
   factory _Link.fromJson(Map<String, dynamic> json) = _$_Link.fromJson;
 
@@ -5276,31 +5374,56 @@ class _$TrashResourceTearOff {
   const _$TrashResourceTearOff();
 
   _TrashResource call(
-      {@JsonKey(name: 'antivirus_status') Object? antivirusStatus,
-      @JsonKey(name: 'resource_id') String? resourceId,
-      @JsonKey(name: 'share') ShareInfo? share,
-      @JsonKey(name: 'file') String? file,
-      @JsonKey(name: 'size') int? size,
-      @JsonKey(name: 'photoslice_time') String? photosliceTime,
-      @JsonKey(name: '_embedded') TrashResourceList? embedded,
-      @JsonKey(name: 'exif') Exif? exif,
-      @JsonKey(name: 'custom_properties') Object? customProperties,
-      @JsonKey(name: 'origin_path') String? originPath,
-      @JsonKey(name: 'media_type') String? mediaType,
-      @JsonKey(name: 'sha256') String? sha256,
-      @JsonKey(name: 'type') required String type,
-      @JsonKey(name: 'mime_type') String? mimeType,
-      @JsonKey(name: 'revision') int? revision,
-      @JsonKey(name: 'deleted') bool? deleted,
-      @JsonKey(name: 'public_url') String? publicUrl,
-      @JsonKey(name: 'path') required String path,
-      @JsonKey(name: 'md5') String? md5,
-      @JsonKey(name: 'public_key') required String publicKey,
-      @JsonKey(name: 'preview') String? preview,
-      @JsonKey(name: 'name') required String name,
-      @JsonKey(name: 'created') required String created,
-      @JsonKey(name: 'modified') required String modified,
-      @JsonKey(name: 'comment_ids') CommentIds? commentIds}) {
+      {@JsonKey(name: 'antivirus_status')
+          Object? antivirusStatus,
+      @JsonKey(name: 'resource_id')
+          String? resourceId,
+      @JsonKey(name: 'share')
+          ShareInfo? share,
+      @JsonKey(name: 'file')
+          String? file,
+      @JsonKey(name: 'size')
+          int? size,
+      @JsonKey(name: 'photoslice_time')
+          String? photosliceTime,
+      @JsonKey(name: '_embedded')
+          TrashResourceList? embedded,
+      @JsonKey(name: 'exif')
+          Exif? exif,
+      @JsonKey(name: 'custom_properties')
+          Map<dynamic, dynamic>? customProperties,
+      @JsonKey(name: 'origin_path')
+          String? originPath,
+      @JsonKey(name: 'media_type')
+          String? mediaType,
+      @JsonKey(name: 'sha256')
+          String? sha256,
+      @JsonKey(name: 'type')
+          required String type,
+      @JsonKey(name: 'mime_type')
+          String? mimeType,
+      @JsonKey(name: 'revision')
+          int? revision,
+      @JsonKey(name: 'deleted')
+          bool? deleted,
+      @JsonKey(name: 'public_url')
+          String? publicUrl,
+      @JsonKey(name: 'path')
+          required String path,
+      @JsonKey(name: 'md5')
+          String? md5,
+      @JsonKey(name: 'public_key')
+          required String publicKey,
+      @JsonKey(name: 'preview')
+          String? preview,
+      @JsonKey(name: 'name')
+          required String name,
+      @JsonKey(name: 'created')
+          required String created,
+      @JsonKey(name: 'modified')
+          required String modified,
+      @JsonKey(name: 'comment_ids')
+          CommentIds? commentIds}) {
     return _TrashResource(
       antivirusStatus: antivirusStatus,
       resourceId: resourceId,
@@ -5357,7 +5480,8 @@ mixin _$TrashResource {
   @JsonKey(name: 'exif')
   Exif? get exif => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_properties')
-  Object? get customProperties => throw _privateConstructorUsedError;
+  Map<dynamic, dynamic>? get customProperties =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'origin_path')
   String? get originPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'media_type')
@@ -5403,31 +5527,56 @@ abstract class $TrashResourceCopyWith<$Res> {
           TrashResource value, $Res Function(TrashResource) then) =
       _$TrashResourceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'antivirus_status') Object? antivirusStatus,
-      @JsonKey(name: 'resource_id') String? resourceId,
-      @JsonKey(name: 'share') ShareInfo? share,
-      @JsonKey(name: 'file') String? file,
-      @JsonKey(name: 'size') int? size,
-      @JsonKey(name: 'photoslice_time') String? photosliceTime,
-      @JsonKey(name: '_embedded') TrashResourceList? embedded,
-      @JsonKey(name: 'exif') Exif? exif,
-      @JsonKey(name: 'custom_properties') Object? customProperties,
-      @JsonKey(name: 'origin_path') String? originPath,
-      @JsonKey(name: 'media_type') String? mediaType,
-      @JsonKey(name: 'sha256') String? sha256,
-      @JsonKey(name: 'type') String type,
-      @JsonKey(name: 'mime_type') String? mimeType,
-      @JsonKey(name: 'revision') int? revision,
-      @JsonKey(name: 'deleted') bool? deleted,
-      @JsonKey(name: 'public_url') String? publicUrl,
-      @JsonKey(name: 'path') String path,
-      @JsonKey(name: 'md5') String? md5,
-      @JsonKey(name: 'public_key') String publicKey,
-      @JsonKey(name: 'preview') String? preview,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'created') String created,
-      @JsonKey(name: 'modified') String modified,
-      @JsonKey(name: 'comment_ids') CommentIds? commentIds});
+      {@JsonKey(name: 'antivirus_status')
+          Object? antivirusStatus,
+      @JsonKey(name: 'resource_id')
+          String? resourceId,
+      @JsonKey(name: 'share')
+          ShareInfo? share,
+      @JsonKey(name: 'file')
+          String? file,
+      @JsonKey(name: 'size')
+          int? size,
+      @JsonKey(name: 'photoslice_time')
+          String? photosliceTime,
+      @JsonKey(name: '_embedded')
+          TrashResourceList? embedded,
+      @JsonKey(name: 'exif')
+          Exif? exif,
+      @JsonKey(name: 'custom_properties')
+          Map<dynamic, dynamic>? customProperties,
+      @JsonKey(name: 'origin_path')
+          String? originPath,
+      @JsonKey(name: 'media_type')
+          String? mediaType,
+      @JsonKey(name: 'sha256')
+          String? sha256,
+      @JsonKey(name: 'type')
+          String type,
+      @JsonKey(name: 'mime_type')
+          String? mimeType,
+      @JsonKey(name: 'revision')
+          int? revision,
+      @JsonKey(name: 'deleted')
+          bool? deleted,
+      @JsonKey(name: 'public_url')
+          String? publicUrl,
+      @JsonKey(name: 'path')
+          String path,
+      @JsonKey(name: 'md5')
+          String? md5,
+      @JsonKey(name: 'public_key')
+          String publicKey,
+      @JsonKey(name: 'preview')
+          String? preview,
+      @JsonKey(name: 'name')
+          String name,
+      @JsonKey(name: 'created')
+          String created,
+      @JsonKey(name: 'modified')
+          String modified,
+      @JsonKey(name: 'comment_ids')
+          CommentIds? commentIds});
 
   $ShareInfoCopyWith<$Res>? get share;
   $TrashResourceListCopyWith<$Res>? get embedded;
@@ -5505,7 +5654,8 @@ class _$TrashResourceCopyWithImpl<$Res>
               as Exif?,
       customProperties: customProperties == freezed
           ? _value.customProperties
-          : customProperties,
+          : customProperties // ignore: cast_nullable_to_non_nullable
+              as Map<dynamic, dynamic>?,
       originPath: originPath == freezed
           ? _value.originPath
           : originPath // ignore: cast_nullable_to_non_nullable
@@ -5626,31 +5776,56 @@ abstract class _$TrashResourceCopyWith<$Res>
       __$TrashResourceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'antivirus_status') Object? antivirusStatus,
-      @JsonKey(name: 'resource_id') String? resourceId,
-      @JsonKey(name: 'share') ShareInfo? share,
-      @JsonKey(name: 'file') String? file,
-      @JsonKey(name: 'size') int? size,
-      @JsonKey(name: 'photoslice_time') String? photosliceTime,
-      @JsonKey(name: '_embedded') TrashResourceList? embedded,
-      @JsonKey(name: 'exif') Exif? exif,
-      @JsonKey(name: 'custom_properties') Object? customProperties,
-      @JsonKey(name: 'origin_path') String? originPath,
-      @JsonKey(name: 'media_type') String? mediaType,
-      @JsonKey(name: 'sha256') String? sha256,
-      @JsonKey(name: 'type') String type,
-      @JsonKey(name: 'mime_type') String? mimeType,
-      @JsonKey(name: 'revision') int? revision,
-      @JsonKey(name: 'deleted') bool? deleted,
-      @JsonKey(name: 'public_url') String? publicUrl,
-      @JsonKey(name: 'path') String path,
-      @JsonKey(name: 'md5') String? md5,
-      @JsonKey(name: 'public_key') String publicKey,
-      @JsonKey(name: 'preview') String? preview,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'created') String created,
-      @JsonKey(name: 'modified') String modified,
-      @JsonKey(name: 'comment_ids') CommentIds? commentIds});
+      {@JsonKey(name: 'antivirus_status')
+          Object? antivirusStatus,
+      @JsonKey(name: 'resource_id')
+          String? resourceId,
+      @JsonKey(name: 'share')
+          ShareInfo? share,
+      @JsonKey(name: 'file')
+          String? file,
+      @JsonKey(name: 'size')
+          int? size,
+      @JsonKey(name: 'photoslice_time')
+          String? photosliceTime,
+      @JsonKey(name: '_embedded')
+          TrashResourceList? embedded,
+      @JsonKey(name: 'exif')
+          Exif? exif,
+      @JsonKey(name: 'custom_properties')
+          Map<dynamic, dynamic>? customProperties,
+      @JsonKey(name: 'origin_path')
+          String? originPath,
+      @JsonKey(name: 'media_type')
+          String? mediaType,
+      @JsonKey(name: 'sha256')
+          String? sha256,
+      @JsonKey(name: 'type')
+          String type,
+      @JsonKey(name: 'mime_type')
+          String? mimeType,
+      @JsonKey(name: 'revision')
+          int? revision,
+      @JsonKey(name: 'deleted')
+          bool? deleted,
+      @JsonKey(name: 'public_url')
+          String? publicUrl,
+      @JsonKey(name: 'path')
+          String path,
+      @JsonKey(name: 'md5')
+          String? md5,
+      @JsonKey(name: 'public_key')
+          String publicKey,
+      @JsonKey(name: 'preview')
+          String? preview,
+      @JsonKey(name: 'name')
+          String name,
+      @JsonKey(name: 'created')
+          String created,
+      @JsonKey(name: 'modified')
+          String modified,
+      @JsonKey(name: 'comment_ids')
+          CommentIds? commentIds});
 
   @override
   $ShareInfoCopyWith<$Res>? get share;
@@ -5734,7 +5909,8 @@ class __$TrashResourceCopyWithImpl<$Res>
               as Exif?,
       customProperties: customProperties == freezed
           ? _value.customProperties
-          : customProperties,
+          : customProperties // ignore: cast_nullable_to_non_nullable
+              as Map<dynamic, dynamic>?,
       originPath: originPath == freezed
           ? _value.originPath
           : originPath // ignore: cast_nullable_to_non_nullable
@@ -5863,7 +6039,7 @@ class _$_TrashResource implements _TrashResource {
   final Exif? exif;
   @override
   @JsonKey(name: 'custom_properties')
-  final Object? customProperties;
+  final Map<dynamic, dynamic>? customProperties;
   @override
   @JsonKey(name: 'origin_path')
   final String? originPath;
@@ -6032,31 +6208,56 @@ class _$_TrashResource implements _TrashResource {
 
 abstract class _TrashResource implements TrashResource {
   const factory _TrashResource(
-      {@JsonKey(name: 'antivirus_status') Object? antivirusStatus,
-      @JsonKey(name: 'resource_id') String? resourceId,
-      @JsonKey(name: 'share') ShareInfo? share,
-      @JsonKey(name: 'file') String? file,
-      @JsonKey(name: 'size') int? size,
-      @JsonKey(name: 'photoslice_time') String? photosliceTime,
-      @JsonKey(name: '_embedded') TrashResourceList? embedded,
-      @JsonKey(name: 'exif') Exif? exif,
-      @JsonKey(name: 'custom_properties') Object? customProperties,
-      @JsonKey(name: 'origin_path') String? originPath,
-      @JsonKey(name: 'media_type') String? mediaType,
-      @JsonKey(name: 'sha256') String? sha256,
-      @JsonKey(name: 'type') required String type,
-      @JsonKey(name: 'mime_type') String? mimeType,
-      @JsonKey(name: 'revision') int? revision,
-      @JsonKey(name: 'deleted') bool? deleted,
-      @JsonKey(name: 'public_url') String? publicUrl,
-      @JsonKey(name: 'path') required String path,
-      @JsonKey(name: 'md5') String? md5,
-      @JsonKey(name: 'public_key') required String publicKey,
-      @JsonKey(name: 'preview') String? preview,
-      @JsonKey(name: 'name') required String name,
-      @JsonKey(name: 'created') required String created,
-      @JsonKey(name: 'modified') required String modified,
-      @JsonKey(name: 'comment_ids') CommentIds? commentIds}) = _$_TrashResource;
+      {@JsonKey(name: 'antivirus_status')
+          Object? antivirusStatus,
+      @JsonKey(name: 'resource_id')
+          String? resourceId,
+      @JsonKey(name: 'share')
+          ShareInfo? share,
+      @JsonKey(name: 'file')
+          String? file,
+      @JsonKey(name: 'size')
+          int? size,
+      @JsonKey(name: 'photoslice_time')
+          String? photosliceTime,
+      @JsonKey(name: '_embedded')
+          TrashResourceList? embedded,
+      @JsonKey(name: 'exif')
+          Exif? exif,
+      @JsonKey(name: 'custom_properties')
+          Map<dynamic, dynamic>? customProperties,
+      @JsonKey(name: 'origin_path')
+          String? originPath,
+      @JsonKey(name: 'media_type')
+          String? mediaType,
+      @JsonKey(name: 'sha256')
+          String? sha256,
+      @JsonKey(name: 'type')
+          required String type,
+      @JsonKey(name: 'mime_type')
+          String? mimeType,
+      @JsonKey(name: 'revision')
+          int? revision,
+      @JsonKey(name: 'deleted')
+          bool? deleted,
+      @JsonKey(name: 'public_url')
+          String? publicUrl,
+      @JsonKey(name: 'path')
+          required String path,
+      @JsonKey(name: 'md5')
+          String? md5,
+      @JsonKey(name: 'public_key')
+          required String publicKey,
+      @JsonKey(name: 'preview')
+          String? preview,
+      @JsonKey(name: 'name')
+          required String name,
+      @JsonKey(name: 'created')
+          required String created,
+      @JsonKey(name: 'modified')
+          required String modified,
+      @JsonKey(name: 'comment_ids')
+          CommentIds? commentIds}) = _$_TrashResource;
 
   factory _TrashResource.fromJson(Map<String, dynamic> json) =
       _$_TrashResource.fromJson;
@@ -6087,7 +6288,8 @@ abstract class _TrashResource implements TrashResource {
   Exif? get exif => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_properties')
-  Object? get customProperties => throw _privateConstructorUsedError;
+  Map<dynamic, dynamic>? get customProperties =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'origin_path')
   String? get originPath => throw _privateConstructorUsedError;
@@ -6587,6 +6789,172 @@ abstract class _OperationStatus implements OperationStatus {
   @override
   @JsonKey(ignore: true)
   _$OperationStatusCopyWith<_OperationStatus> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ResourcePatch _$ResourcePatchFromJson(Map<String, dynamic> json) {
+  return _ResourcePatch.fromJson(json);
+}
+
+/// @nodoc
+class _$ResourcePatchTearOff {
+  const _$ResourcePatchTearOff();
+
+  _ResourcePatch call(
+      {@JsonKey(name: 'custom_properties')
+          Map<dynamic, dynamic>? customProperties}) {
+    return _ResourcePatch(
+      customProperties: customProperties,
+    );
+  }
+
+  ResourcePatch fromJson(Map<String, Object> json) {
+    return ResourcePatch.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ResourcePatch = _$ResourcePatchTearOff();
+
+/// @nodoc
+mixin _$ResourcePatch {
+  @JsonKey(name: 'custom_properties')
+  Map<dynamic, dynamic>? get customProperties =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ResourcePatchCopyWith<ResourcePatch> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ResourcePatchCopyWith<$Res> {
+  factory $ResourcePatchCopyWith(
+          ResourcePatch value, $Res Function(ResourcePatch) then) =
+      _$ResourcePatchCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'custom_properties')
+          Map<dynamic, dynamic>? customProperties});
+}
+
+/// @nodoc
+class _$ResourcePatchCopyWithImpl<$Res>
+    implements $ResourcePatchCopyWith<$Res> {
+  _$ResourcePatchCopyWithImpl(this._value, this._then);
+
+  final ResourcePatch _value;
+  // ignore: unused_field
+  final $Res Function(ResourcePatch) _then;
+
+  @override
+  $Res call({
+    Object? customProperties = freezed,
+  }) {
+    return _then(_value.copyWith(
+      customProperties: customProperties == freezed
+          ? _value.customProperties
+          : customProperties // ignore: cast_nullable_to_non_nullable
+              as Map<dynamic, dynamic>?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$ResourcePatchCopyWith<$Res>
+    implements $ResourcePatchCopyWith<$Res> {
+  factory _$ResourcePatchCopyWith(
+          _ResourcePatch value, $Res Function(_ResourcePatch) then) =
+      __$ResourcePatchCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'custom_properties')
+          Map<dynamic, dynamic>? customProperties});
+}
+
+/// @nodoc
+class __$ResourcePatchCopyWithImpl<$Res>
+    extends _$ResourcePatchCopyWithImpl<$Res>
+    implements _$ResourcePatchCopyWith<$Res> {
+  __$ResourcePatchCopyWithImpl(
+      _ResourcePatch _value, $Res Function(_ResourcePatch) _then)
+      : super(_value, (v) => _then(v as _ResourcePatch));
+
+  @override
+  _ResourcePatch get _value => super._value as _ResourcePatch;
+
+  @override
+  $Res call({
+    Object? customProperties = freezed,
+  }) {
+    return _then(_ResourcePatch(
+      customProperties: customProperties == freezed
+          ? _value.customProperties
+          : customProperties // ignore: cast_nullable_to_non_nullable
+              as Map<dynamic, dynamic>?,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_ResourcePatch implements _ResourcePatch {
+  const _$_ResourcePatch(
+      {@JsonKey(name: 'custom_properties') this.customProperties});
+
+  factory _$_ResourcePatch.fromJson(Map<String, dynamic> json) =>
+      _$_$_ResourcePatchFromJson(json);
+
+  @override
+  @JsonKey(name: 'custom_properties')
+  final Map<dynamic, dynamic>? customProperties;
+
+  @override
+  String toString() {
+    return 'ResourcePatch(customProperties: $customProperties)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ResourcePatch &&
+            (identical(other.customProperties, customProperties) ||
+                const DeepCollectionEquality()
+                    .equals(other.customProperties, customProperties)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(customProperties);
+
+  @JsonKey(ignore: true)
+  @override
+  _$ResourcePatchCopyWith<_ResourcePatch> get copyWith =>
+      __$ResourcePatchCopyWithImpl<_ResourcePatch>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ResourcePatchToJson(this);
+  }
+}
+
+abstract class _ResourcePatch implements ResourcePatch {
+  const factory _ResourcePatch(
+      {@JsonKey(name: 'custom_properties')
+          Map<dynamic, dynamic>? customProperties}) = _$_ResourcePatch;
+
+  factory _ResourcePatch.fromJson(Map<String, dynamic> json) =
+      _$_ResourcePatch.fromJson;
+
+  @override
+  @JsonKey(name: 'custom_properties')
+  Map<dynamic, dynamic>? get customProperties =>
+      throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$ResourcePatchCopyWith<_ResourcePatch> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
