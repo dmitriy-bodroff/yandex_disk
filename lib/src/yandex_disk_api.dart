@@ -20,6 +20,10 @@ class YandexDiskApi {
           ),
         );
 
+  void updateAccessToken(final String accessToken) {
+    _dio.options.headers['Authorization'] = 'OAuth $accessToken';
+  }
+
   /// Данные о Диске пользователя.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/capacity.html

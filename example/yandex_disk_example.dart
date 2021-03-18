@@ -10,7 +10,21 @@ class Configuration {
 }
 
 void main() async {
-  final api = YandexDiskApi('https://cloud-api.yandex.net', configuration.accessToken);
+  final api = YandexDiskApi('https://cloud-api.yandex.net', '123456789012345678901234567890123456789');
+
+  try {
+    print('---');
+
+    {
+      print('readDisk...');
+      final disk = await api.readDisk();
+      print(disk);
+    }
+  } on DioError catch (e) {
+    print(e);
+  }
+
+  api.updateAccessToken(configuration.accessToken);
 
   try {
     print('---');
