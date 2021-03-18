@@ -30,5 +30,6 @@ pub run build_runner build
 ## Ссылки
 
 - https://yandex.ru/dev/disk/poligon/
+- https://disk.yandex.ru
 - https://github.com/swagger-api/swagger-codegen
 - https://cloud-api.yandex.net/v1/schema?api=disk

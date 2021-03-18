@@ -70,6 +70,23 @@ void main() async {
     print('---');
 
     {
+      print('moveDiskResource...');
+      final link =
+          await api.moveDiskResource(from: 'app:/example/copied-directory', path: 'app:/example/moved-directory');
+      print(link);
+    }
+
+    print('---');
+
+    {
+      print('downloadDiskResource...');
+      final binaryData = await api.downloadDiskResource(path: 'app:/example/moved-directory/file.json');
+      print(String.fromCharCodes(binaryData));
+    }
+
+    print('---');
+
+    {
       print('deleteDiskResource...');
       await api.deleteDiskResource(path: 'app:/example/directory', permanently: true);
     }

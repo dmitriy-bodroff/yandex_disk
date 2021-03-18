@@ -1,3 +1,4 @@
+/// See: https://yandex.ru/dev/disk/api/reference/response-objects.html
 import 'dart:io';
 
 import 'package:dio/dio.dart';
@@ -90,6 +91,31 @@ class YandexDiskApi {
     return Resource.fromJson(response.data);
   }
 
+  /// Плоский список всех файлов.
+  ///
+  /// See: https://yandex.ru/dev/disk/api/reference/all-files.html
+  Future<FilesResourceList> readDiskResourceFiles({
+    final String? fields,
+    final int? limit,
+    final String? mediaType,
+    final int? offset,
+    final bool? previewCrop,
+    final String? previewSize,
+    final String? sort,
+  }) async {
+    final response = await _dio.get('$_diskResources/files', queryParameters: {
+      if (fields != null) 'fields': fields,
+      if (limit != null) 'limit': limit,
+      if (mediaType != null) 'media_type': mediaType,
+      if (offset != null) 'offset': offset,
+      if (previewCrop != null) 'preview_crop': previewCrop,
+      if (previewSize != null) 'preview_size': previewSize,
+      if (sort != null) 'sort': sort,
+    });
+
+    return FilesResourceList.fromJson(response.data);
+  }
+
   /// Добавление метаинформации для ресурса.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/meta-add.html
@@ -139,6 +165,56 @@ class YandexDiskApi {
     return link;
   }
 
+  /// Перемещение файла или папки.
+  ///
+  /// See: https://yandex.ru/dev/disk/api/reference/move.html
+  Future<Link> moveDiskResource({
+    required final String from,
+    required final String path,
+    final String? fields,
+    final bool? forceAsync,
+    final bool? overwrite,
+  }) async {
+    final response = await _dio.post('$_diskResources/move', queryParameters: {
+      'from': from,
+      'path': path,
+      if (fields != null) 'fields': fields,
+      if (forceAsync != null) 'force_async': forceAsync,
+      if (overwrite != null) 'overwrite': overwrite,
+    });
+
+    final link = Link.fromJson(response.data);
+
+    if (HttpStatus.accepted == response.statusCode) {
+      final operationId = link.extractOperationId();
+      await _wait(operationId);
+    }
+
+    return link;
+  }
+
+  /// Скачивание файла с Диска.
+  ///
+  /// See: https://yandex.ru/dev/disk/api/reference/content.html
+  Future<List<int>> downloadDiskResource({
+    required final String path,
+    final String? fields,
+  }) async {
+    final response = await _dio.get('$_diskResources/download', queryParameters: {
+      'path': path,
+      if (fields != null) 'fields': fields,
+    });
+
+    final link = Link.fromJson(response.data);
+
+    final downloadResponse = await _dio.getUri(
+      Uri.parse(link.href),
+      options: Options(responseType: ResponseType.bytes),
+    );
+
+    return downloadResponse.data!;
+  }
+
   /// Удаление файла или папки.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/delete.html
@@ -181,10 +257,35 @@ class YandexDiskApi {
       sleep(Duration(milliseconds: waitMilliseconds));
     } while (OperationStatuses.inProgress == operationStatus.status);
   }
+
+  // TODO: Публичные файлы и папки. See: https://yandex.ru/dev/disk/api/reference/recent-public.html
+  // TODO: Корзина. See: https://yandex.ru/dev/disk/api/reference/trash-delete.html
 }
 
 class OperationStatuses {
   static const inProgress = 'in-progress';
   static const success = 'success';
   static const failed = 'failed';
+}
+
+class MediaTypes {
+  static const audio = 'audio';
+  static const backup = 'backup';
+  static const book = 'book';
+  static const compressed = 'compressed';
+  static const data = 'data';
+  static const development = 'development';
+  static const diskimage = 'diskimage';
+  static const document = 'document';
+  static const encoded = 'encoded';
+  static const executable = 'executable';
+  static const flash = 'flash';
+  static const font = 'font';
+  static const image = 'image';
+  static const settings = 'settings';
+  static const spreadsheet = 'spreadsheet';
+  static const text = 'text';
+  static const unknown = 'unknown';
+  static const video = 'video';
+  static const web = 'web';
 }
