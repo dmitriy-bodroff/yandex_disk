@@ -17,6 +17,6 @@ doc/api/
 *.iml
 
 # Files with sensitive data to access to Yandex.Disk via REST API and OAuth
-docs/credentials.txt
-docs/http-client.private.env.json
+doc/credentials.txt
+doc/http-client.private.env.json
 example/configuration.dart
