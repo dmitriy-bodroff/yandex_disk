@@ -12,11 +12,11 @@ build/
 # Directory created by dartdoc
 doc/api/
 
-# Файлы и директории созданные IntelliJ IDEA
+# Files and directories created by IntelliJ IDEA
 .idea/
 *.iml
 
-# Файл с чувствительными данными для доступа к Яндекс.Диск по REST API и OAuth
+# Files with sensitive data to access to Yandex.Disk via REST API and OAuth
 docs/credentials.txt
 docs/http-client.private.env.json
 example/configuration.dart

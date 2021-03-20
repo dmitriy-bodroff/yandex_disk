@@ -24,7 +24,7 @@ class YandexDiskApi {
     _dio.options.headers['Authorization'] = 'OAuth $accessToken';
   }
 
-  /// Данные о Диске пользователя.
+  /// Read user's disk data.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/capacity.html
   Future<Disk> readDisk({final String? fields}) async {
@@ -35,7 +35,7 @@ class YandexDiskApi {
     return Disk.fromJson(response.data);
   }
 
-  /// Создание папки.
+  /// Create the folder.
   /// See: https://yandex.ru/dev/disk/api/reference/create-folder.html
   Future<Link> createDiskResource({required final String path, final String? fields}) async {
     final response = await _dio.put(_diskResources, queryParameters: {
@@ -46,7 +46,7 @@ class YandexDiskApi {
     return Link.fromJson(response.data);
   }
 
-  /// Загрузка файла на Диск.
+  /// Upload the file.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/upload.html
   Future<void> uploadDiskResource({
@@ -70,7 +70,7 @@ class YandexDiskApi {
     );
   }
 
-  /// Метаинформация о файле или папке.
+  /// Read the meta information about the file or the folder.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/meta.html
   Future<Resource> readDiskResource({
@@ -95,7 +95,7 @@ class YandexDiskApi {
     return Resource.fromJson(response.data);
   }
 
-  /// Плоский список всех файлов.
+  /// Read the flattened list of all files.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/all-files.html
   Future<FilesResourceList> readDiskResourceFiles({
@@ -120,7 +120,7 @@ class YandexDiskApi {
     return FilesResourceList.fromJson(response.data);
   }
 
-  /// Добавление метаинформации для ресурса.
+  /// Update the meta information of the file or the folder.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/meta-add.html
   Future<Resource> updateDiskResourceInfo(
@@ -141,7 +141,7 @@ class YandexDiskApi {
     return Resource.fromJson(response.data);
   }
 
-  /// Копирование файла или папки.
+  /// Copy the file or the folder.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/copy.html
   Future<Link> copyDiskResource({
@@ -169,7 +169,7 @@ class YandexDiskApi {
     return link;
   }
 
-  /// Перемещение файла или папки.
+  /// Move the file or the folder.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/move.html
   Future<Link> moveDiskResource({
@@ -197,7 +197,7 @@ class YandexDiskApi {
     return link;
   }
 
-  /// Скачивание файла с Диска.
+  /// Download the file.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/content.html
   Future<List<int>> downloadDiskResource({
@@ -219,7 +219,7 @@ class YandexDiskApi {
     return downloadResponse.data!;
   }
 
-  /// Удаление файла или папки.
+  /// Delete the file ot the folder.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/delete.html
   Future<void> deleteDiskResource({
@@ -243,7 +243,7 @@ class YandexDiskApi {
     }
   }
 
-  /// Статус операции.
+  /// Read the status of the operation.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/operations.html
   Future<OperationStatus> readDiskOperation({required final String operationId, final String? fields}) async {
@@ -262,8 +262,8 @@ class YandexDiskApi {
     } while (OperationStatuses.inProgress == operationStatus.status);
   }
 
-  // TODO: Публичные файлы и папки. See: https://yandex.ru/dev/disk/api/reference/recent-public.html
-  // TODO: Корзина. See: https://yandex.ru/dev/disk/api/reference/trash-delete.html
+  // TODO: Add methods to work with public files and folders. See: https://yandex.ru/dev/disk/api/reference/recent-public.html
+  // TODO: Add methods to work with the trash. See: https://yandex.ru/dev/disk/api/reference/trash-delete.html
 }
 
 class OperationStatuses {

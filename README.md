@@ -1,4 +1,4 @@
-A library for Dart developers.
+The library for integration with Yandex.Disk via HTTP REST API.
 
 Created from templates made available by Stagehand under a BSD-style
 [license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
@@ -10,8 +10,10 @@ A simple usage example:
 ```dart
 import 'package:yandex_disk/yandex_disk.dart';
 
-main() {
-  var awesome = new Awesome();
+main() async {
+  final api = YandexDiskApi('https://cloud-api.yandex.net', '<ACCESS_TOKEN>');
+  final disk = await api.readDisk();
+  // And so on...
 }
 ```
 
@@ -19,15 +21,15 @@ main() {
 
 Please file feature requests and bugs at the [issue tracker][tracker].
 
-[tracker]: http://example.com/issues/replaceme
+[tracker]: https://github.com/the-english-breaker/yandex_disk/issues
 
-## Полезные команды
+## Useful commands
 
 ```shell
 pub run build_runner build
 ```
 
-## Ссылки
+## Links
 
 - https://yandex.ru/dev/disk/poligon/
 - https://disk.yandex.ru

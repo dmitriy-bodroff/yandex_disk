@@ -1,3 +1,3 @@
-### Открыть в броузере, чтобы получить тестовый access token
+### Open in browser to get a test access token
 
 https://oauth.yandex.ru/authorize?response_type=token&client_id={{client_id}}
