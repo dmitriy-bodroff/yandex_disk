@@ -1,5 +1,5 @@
 /// See: https://yandex.ru/dev/disk/api/reference/response-objects.html
-import 'dart:io';
+import 'dart:html';
 
 import 'package:dio/dio.dart';
 import 'package:yandex_disk/yandex_disk.dart';
@@ -37,7 +37,10 @@ class YandexDiskApi {
 
   /// Create the folder.
   /// See: https://yandex.ru/dev/disk/api/reference/create-folder.html
-  Future<Link> createDiskResource({required final String path, final String? fields}) async {
+  Future<Link> createDiskResource({
+    required final String path,
+    final String? fields,
+  }) async {
     final response = await _dio.put(_diskResources, queryParameters: {
       'path': path,
       if (fields != null) 'fields': fields,
@@ -66,7 +69,9 @@ class YandexDiskApi {
     await _dio.putUri(
       Uri.parse(resourceUploadLink.href),
       data: Stream.fromIterable(binaryData.map((e) => [e])),
-      options: Options(headers: {Headers.contentLengthHeader: binaryData.length}),
+      options: Options(headers: {
+        Headers.contentLengthHeader: binaryData.length,
+      }),
     );
   }
 
@@ -123,8 +128,11 @@ class YandexDiskApi {
   /// Update the meta information of the file or the folder.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/meta-add.html
-  Future<Resource> updateDiskResourceInfo(
-      {required final String path, final String? fields, final Map? customProperties}) async {
+  Future<Resource> updateDiskResourceInfo({
+    required final String path,
+    final String? fields,
+    final Map? customProperties,
+  }) async {
     final response = await _dio.patch(
       _diskResources,
       queryParameters: {
@@ -204,10 +212,13 @@ class YandexDiskApi {
     required final String path,
     final String? fields,
   }) async {
-    final response = await _dio.get('$_diskResources/download', queryParameters: {
-      'path': path,
-      if (fields != null) 'fields': fields,
-    });
+    final response = await _dio.get(
+      '$_diskResources/download',
+      queryParameters: {
+        'path': path,
+        if (fields != null) 'fields': fields,
+      },
+    );
 
     final link = Link.fromJson(response.data);
 
@@ -246,10 +257,16 @@ class YandexDiskApi {
   /// Read the status of the operation.
   ///
   /// See: https://yandex.ru/dev/disk/api/reference/operations.html
-  Future<OperationStatus> readDiskOperation({required final String operationId, final String? fields}) async {
-    final response = await _dio.get('$_diskOperations/$operationId', queryParameters: {
-      if (fields != null) 'fields': fields,
-    });
+  Future<OperationStatus> readDiskOperation({
+    required final String operationId,
+    final String? fields,
+  }) async {
+    final response = await _dio.get(
+      '$_diskOperations/$operationId',
+      queryParameters: {
+        if (fields != null) 'fields': fields,
+      },
+    );
 
     return OperationStatus.fromJson(response.data);
   }
@@ -258,7 +275,7 @@ class YandexDiskApi {
     OperationStatus operationStatus;
     do {
       operationStatus = await readDiskOperation(operationId: operationId);
-      sleep(Duration(milliseconds: waitMilliseconds));
+      await Future.delayed(Duration(milliseconds: waitMilliseconds));
     } while (OperationStatuses.inProgress == operationStatus.status);
   }
 

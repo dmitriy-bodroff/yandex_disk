@@ -6,7 +6,8 @@ part 'yandex_disk_dto.g.dart';
 @freezed
 class Disk with _$Disk {
   const factory Disk({
-    @JsonKey(name: 'unlimited_autoupload_enabled') bool? unlimitedAutouploadEnabled,
+    @JsonKey(name: 'unlimited_autoupload_enabled')
+        bool? unlimitedAutouploadEnabled,
     @JsonKey(name: 'max_file_size') int? maxFileSize,
     @JsonKey(name: 'total_space') int? totalSpace,
     @JsonKey(name: 'trash_size') int? trashSize,
@@ -36,7 +37,8 @@ class SystemFolders with _$SystemFolders {
     @JsonKey(name: 'photostream') String? photostream,
   }) = _SystemFolders;
 
-  factory SystemFolders.fromJson(Map<String, dynamic> json) => _$SystemFoldersFromJson(json);
+  factory SystemFolders.fromJson(Map<String, dynamic> json) =>
+      _$SystemFoldersFromJson(json);
 }
 
 @freezed
@@ -79,7 +81,8 @@ class Resource with _$Resource {
     @JsonKey(name: 'comment_ids') CommentIds? commentIds,
   }) = _Resource;
 
-  factory Resource.fromJson(Map<String, dynamic> json) => _$ResourceFromJson(json);
+  factory Resource.fromJson(Map<String, dynamic> json) =>
+      _$ResourceFromJson(json);
 }
 
 @freezed
@@ -90,7 +93,8 @@ class ShareInfo with _$ShareInfo {
     @JsonKey(name: 'rights') required String rights,
   }) = _ShareInfo;
 
-  factory ShareInfo.fromJson(Map<String, dynamic> json) => _$ShareInfoFromJson(json);
+  factory ShareInfo.fromJson(Map<String, dynamic> json) =>
+      _$ShareInfoFromJson(json);
 }
 
 @freezed
@@ -104,7 +108,8 @@ class ResourceList with _$ResourceList {
     @JsonKey(name: 'total') int? total,
   }) = _ResourceList;
 
-  factory ResourceList.fromJson(Map<String, dynamic> json) => _$ResourceListFromJson(json);
+  factory ResourceList.fromJson(Map<String, dynamic> json) =>
+      _$ResourceListFromJson(json);
 }
 
 @freezed
@@ -123,7 +128,8 @@ class CommentIds with _$CommentIds {
     @JsonKey(name: 'public_resource') String? publicResource,
   }) = _CommentIds;
 
-  factory CommentIds.fromJson(Map<String, dynamic> json) => _$CommentIdsFromJson(json);
+  factory CommentIds.fromJson(Map<String, dynamic> json) =>
+      _$CommentIdsFromJson(json);
 }
 
 @freezed
@@ -148,7 +154,8 @@ class FilesResourceList with _$FilesResourceList {
     @JsonKey(name: 'offset') int? offset,
   }) = _FilesResourceList;
 
-  factory FilesResourceList.fromJson(Map<String, dynamic> json) => _$FilesResourceListFromJson(json);
+  factory FilesResourceList.fromJson(Map<String, dynamic> json) =>
+      _$FilesResourceListFromJson(json);
 }
 
 @freezed
@@ -158,7 +165,8 @@ class LastUploadedResourceList with _$LastUploadedResourceList {
     @JsonKey(name: 'limit') int? limit,
   }) = _LastUploadedResourceList;
 
-  factory LastUploadedResourceList.fromJson(Map<String, dynamic> json) => _$LastUploadedResourceListFromJson(json);
+  factory LastUploadedResourceList.fromJson(Map<String, dynamic> json) =>
+      _$LastUploadedResourceListFromJson(json);
 }
 
 @freezed
@@ -170,7 +178,8 @@ class PublicResourcesList with _$PublicResourcesList {
     @JsonKey(name: 'offset') int? offset,
   }) = _PublicResourcesList;
 
-  factory PublicResourcesList.fromJson(Map<String, dynamic> json) => _$PublicResourcesListFromJson(json);
+  factory PublicResourcesList.fromJson(Map<String, dynamic> json) =>
+      _$PublicResourcesListFromJson(json);
 }
 
 @freezed
@@ -182,7 +191,8 @@ class ResourceUploadLink with _$ResourceUploadLink {
     @JsonKey(name: 'templated') bool? templated,
   }) = _ResourceUploadLink;
 
-  factory ResourceUploadLink.fromJson(Map<String, dynamic> json) => _$ResourceUploadLinkFromJson(json);
+  factory ResourceUploadLink.fromJson(Map<String, dynamic> json) =>
+      _$ResourceUploadLinkFromJson(json);
 }
 
 @freezed
@@ -214,7 +224,8 @@ class PublicResource with _$PublicResource {
     @JsonKey(name: 'comment_ids') CommentIds? commentIds,
   }) = _PublicResource;
 
-  factory PublicResource.fromJson(Map<String, dynamic> json) => _$PublicResourceFromJson(json);
+  factory PublicResource.fromJson(Map<String, dynamic> json) =>
+      _$PublicResourceFromJson(json);
 }
 
 @freezed
@@ -225,7 +236,8 @@ class UserPublicInformation with _$UserPublicInformation {
     @JsonKey(name: 'uid') String? uid,
   }) = _UserPublicInformation;
 
-  factory UserPublicInformation.fromJson(Map<String, dynamic> json) => _$UserPublicInformationFromJson(json);
+  factory UserPublicInformation.fromJson(Map<String, dynamic> json) =>
+      _$UserPublicInformationFromJson(json);
 }
 
 @freezed
@@ -240,7 +252,8 @@ class PublicResourceList with _$PublicResourceList {
     @JsonKey(name: 'total') int? total,
   }) = _PublicResourceList;
 
-  factory PublicResourceList.fromJson(Map<String, dynamic> json) => _$PublicResourceListFromJson(json);
+  factory PublicResourceList.fromJson(Map<String, dynamic> json) =>
+      _$PublicResourceListFromJson(json);
 }
 
 @freezed
@@ -273,7 +286,8 @@ class TrashResource with _$TrashResource {
     @JsonKey(name: 'comment_ids') CommentIds? commentIds,
   }) = _TrashResource;
 
-  factory TrashResource.fromJson(Map<String, dynamic> json) => _$TrashResourceFromJson(json);
+  factory TrashResource.fromJson(Map<String, dynamic> json) =>
+      _$TrashResourceFromJson(json);
 }
 
 @freezed
@@ -287,7 +301,8 @@ class TrashResourceList with _$TrashResourceList {
     @JsonKey(name: 'total') int? total,
   }) = _TrashResourceList;
 
-  factory TrashResourceList.fromJson(Map<String, dynamic> json) => _$TrashResourceListFromJson(json);
+  factory TrashResourceList.fromJson(Map<String, dynamic> json) =>
+      _$TrashResourceListFromJson(json);
 }
 
 @freezed
@@ -296,7 +311,8 @@ class OperationStatus with _$OperationStatus {
     @JsonKey(name: 'status') required String status,
   }) = _OperationStatus;
 
-  factory OperationStatus.fromJson(Map<String, dynamic> json) => _$OperationStatusFromJson(json);
+  factory OperationStatus.fromJson(Map<String, dynamic> json) =>
+      _$OperationStatusFromJson(json);
 }
 
 @freezed
@@ -305,7 +321,8 @@ class ResourcePatch with _$ResourcePatch {
     @JsonKey(name: 'custom_properties') Map? customProperties,
   }) = _ResourcePatch;
 
-  factory ResourcePatch.fromJson(Map<String, dynamic> json) => _$ResourcePatchFromJson(json);
+  factory ResourcePatch.fromJson(Map<String, dynamic> json) =>
+      _$ResourcePatchFromJson(json);
 }
 
 @freezed
