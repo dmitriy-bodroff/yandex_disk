@@ -1,6 +1,4 @@
 /// See: https://yandex.ru/dev/disk/api/reference/response-objects.html
-import 'dart:html';
-
 import 'package:dio/dio.dart';
 import 'package:yandex_disk/yandex_disk.dart';
 
@@ -141,7 +139,7 @@ class YandexDiskApi {
       },
       data: ResourcePatch(customProperties: customProperties),
     );
-    if (HttpStatus.accepted == response.statusCode) {
+    if (_HttpStatus.accepted == response.statusCode) {
       final operationId = Link.fromJson(response.data).extractOperationId();
       await _wait(operationId);
     }
@@ -169,7 +167,7 @@ class YandexDiskApi {
 
     final link = Link.fromJson(response.data);
 
-    if (HttpStatus.accepted == response.statusCode) {
+    if (_HttpStatus.accepted == response.statusCode) {
       final operationId = link.extractOperationId();
       await _wait(operationId);
     }
@@ -197,7 +195,7 @@ class YandexDiskApi {
 
     final link = Link.fromJson(response.data);
 
-    if (HttpStatus.accepted == response.statusCode) {
+    if (_HttpStatus.accepted == response.statusCode) {
       final operationId = link.extractOperationId();
       await _wait(operationId);
     }
@@ -248,7 +246,7 @@ class YandexDiskApi {
       if (permanently != null) 'permanently': permanently,
     });
 
-    if (HttpStatus.accepted == response.statusCode) {
+    if (_HttpStatus.accepted == response.statusCode) {
       final operationId = Link.fromJson(response.data).extractOperationId();
       await _wait(operationId);
     }
@@ -309,4 +307,8 @@ class MediaTypes {
   static const unknown = 'unknown';
   static const video = 'video';
   static const web = 'web';
+}
+
+abstract class _HttpStatus {
+  static const int accepted = 202;
 }

@@ -1,10 +1,10 @@
 name: yandex_disk
 description: The library for integration with Yandex.Disk via HTTP REST API.
-version: 0.1.1
-homepage: http://the-english-breaker.ru
+version: 0.1.2
+homepage: https://the-english-breaker.ru
 
 environment:
-  sdk: '>=2.13.0-0 <3.0.0'
+  sdk: '>=2.12.2 <3.0.0'
 
 dependencies:
   dio: ^4.0.0
